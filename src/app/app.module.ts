@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CoreModule } from './core/core.module';
-import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule, MatIconModule, MatListModule } from '@angular/material';
 
@@ -16,7 +15,6 @@ import { MatButtonModule, MatIconModule, MatListModule } from '@angular/material
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    SidebarComponent,
   ],
   imports: [
     BrowserModule,
