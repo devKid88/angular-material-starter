@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AdminLayoudComponent } from './layouts/admin-layoud/admin-layoud.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminLayoudComponent,
+    component: AdminLayoutComponent,
     children: [ ]
   }
 ];
