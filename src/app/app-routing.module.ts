@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AdminLayoudComponent } from './layouts/admin-layoud/admin-layoud.component';
+
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
-  // { path: 'path', component: FeatureComponent },
-  // { path: '**', component: PageNotFoundComponent },
+  {
+    path: '',
+    component: AdminLayoudComponent,
+    children: [ ]
+  }
 ];
 
 @NgModule({
