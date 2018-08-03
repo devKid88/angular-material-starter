@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutModule } from '@angular/cdk/layout';
+import { 
+  MatButtonModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule, 
+  MatCardModule,
+  MatMenuModule 
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CoreModule } from './core/core.module';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule, MatIconModule, MatListModule } from '@angular/material';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +32,10 @@ import { MatButtonModule, MatIconModule, MatListModule } from '@angular/material
     LayoutModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
