@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AlertService } from './alert/alert.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   exports: [
     FlexLayoutModule
   ],
-  declarations: []
+  declarations: [
+  ],
+  providers: [
+    AlertService
+  ]
 })
 export class SharedModule { }
