@@ -4,13 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
-import { 
+import {
   MatButtonModule,
   MatIconModule,
   MatListModule,
-  MatGridListModule, 
+  MatGridListModule,
   MatCardModule,
-  MatMenuModule 
+  MatMenuModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
