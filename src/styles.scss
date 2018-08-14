@@ -11,6 +11,9 @@
 // Add the material icons from the Google CDN
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
 
+// Add style for tostr
+@import '~ngx-toastr/toastr.css';
+
 // mat-core function adds the default styling for the material components, like colors, padding, overlays and so on
 @include mat-core();
 

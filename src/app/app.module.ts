@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ToastrModule } from 'ngx-toastr';
 import {
   MatButtonModule,
   MatIconModule,
@@ -17,6 +18,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CoreModule } from './core/core.module';
+
+const toastrConfig = {
+  timeOut: 2000
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +31,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(toastrConfig),
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
