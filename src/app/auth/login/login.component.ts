@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AlertService } from '../../shared/alert/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+  password: string;
+
+  constructor(
+    private router: Router,
+    private alert: AlertService
+  ) { }
 
   ngOnInit() {
   }
 
+  login(): void {
+    if (this.username == 'admin' && this.password == 'admin') {
+      this.router.navigate(['user']);
+    } else {
+      this.alert.error('Bad Credentials');
+    }
+  }
 }

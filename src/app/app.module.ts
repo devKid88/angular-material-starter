@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CoreModule } from './core/core.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const toastrConfig = {
   timeOut: 2000
@@ -32,6 +33,8 @@ const toastrConfig = {
     BrowserModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(toastrConfig),
+    // TODO: Check Flex layout for root option
+    FlexLayoutModule,
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,

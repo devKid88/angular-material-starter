@@ -1,3 +1,27 @@
-<p>
-  login works!
-</p>
+<div class="login-page" fxLayout="row" fxLayoutAlign="end center">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form" fxLayout="column">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+        </mat-form-field>
+      </form>
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <button mat-raised-button (click)="login()" color="primary">Login</button>
+        <button mat-raised-button>Forgot Password</button>
+      </div>
+      <div fxLayout="row">
+        <button class="full-width" style="margin-top: 8px;" mat-raised-button>Sign Up</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

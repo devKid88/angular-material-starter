@@ -1,5 +1,5 @@
-.sidenav-container {
-  height: 100%;
+.admin-page {
+  height: 100vh;
 }
 
 .sidenav {
@@ -11,11 +11,31 @@
   top: 0;
 }
 
-.top-bar {
-  position: fixed !important; 
-  z-index: 999;
-}
-
 .sidebar-link-icon {
   margin-right: 16px;
 }
+
+::ng-deep .mat-toolbar{
+  z-index: 998;
+  position: fixed
+}
+
+// TODO: Check all commented code
+
+// ::ng-deep .mat-tab-group{
+//   margin-top:55px !important;
+// }
+
+// ::ng-deep .mat-tab-header{
+//       z-index: 999;
+//       width:100vw;
+//       position: fixed  !important;
+//       background-color: red !important;
+// }
+// ::ng-deep .mat-tab-body-wrapper{
+//     position: relative !important;
+//     margin-top:55px;
+// }
+// .content {
+//   padding-top: 65px;
+// }
