@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
         loadChildren: './dashboard/dashboard.module#DashboardModule'
       }
      ]
+  },
+  {
+    path: '**',
+    component: Page404Component
   }
 ];
 

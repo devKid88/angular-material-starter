@@ -17,11 +17,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { CoreModule } from './core/core.module';
 import { AppHttpInterceptor } from './core/auth-interceptor';
+import { CoreModule } from './core/core.module';
+import { Page404Component } from './page404/page404.component';
 
 const toastrConfig = {
   timeOut: 2000
@@ -31,6 +32,7 @@ const toastrConfig = {
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
