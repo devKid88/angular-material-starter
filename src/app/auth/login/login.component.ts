@@ -13,12 +13,21 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
 
+  positions = [
+    'start', 'center', 'end'
+  ];
+
+  xPosition: string;
+  yPosition: string;
+
   constructor(
     private router: Router,
     private alert: AlertService
   ) { }
 
   ngOnInit() {
+    this.xPosition = this.randomPosition();
+    this.yPosition = this.randomPosition();
   }
 
   login(): void {
@@ -27,5 +36,9 @@ export class LoginComponent implements OnInit {
     } else {
       this.alert.error('Bad Credentials');
     }
+  }
+
+  private randomPosition() {
+    return this.positions[Math.floor(Math.random() * this.positions.length)];
   }
 }
