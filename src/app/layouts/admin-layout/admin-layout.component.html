@@ -16,15 +16,16 @@
     </button>
     <mat-menu #menu="matMenu">
       <a mat-menu-item [routerLink]="['/user/profile']" href="#">
-        <i class="fal fa-user"></i> Profile
+        <mat-icon>person</mat-icon> Profile
       </a>
       <button mat-menu-item (click)="logout($event)" href="#">
-        <i class="fal fa-sign-out-alt"></i> Logout
+        <mat-icon>lock</mat-icon> Logout
       </button>
     </mat-menu>
   </mat-toolbar>
 
   <mat-sidenav-container>
+
     <mat-sidenav
       #drawer
       class="sidenav"
