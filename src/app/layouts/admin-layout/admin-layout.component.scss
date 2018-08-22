@@ -20,6 +20,12 @@
   position: fixed
 }
 
+// TODO: Check addind activeRouter class to a tags for future use
+.mat-nav-list a.active {
+  background-color: #1856c9;
+}
+
+
 // TODO: Check all commented code
 
 // ::ng-deep .mat-tab-group{
