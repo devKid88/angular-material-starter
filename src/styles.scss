@@ -1,12 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 // IMPORT ANGULAR MATERIAL THEME 
-// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-// OR IMPORT YOUR THEME SETUP
-// Loads the angular material theming variables and functions 
-// that enable you to customize and interact with the material theme
-@import '~@angular/material/theming';
+
 
 // Add the material icons from the Google CDN
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
@@ -14,29 +11,36 @@
 // Add style for tostr
 @import '~ngx-toastr/toastr.css';
 
-// mat-core function adds the default styling for the material components, like colors, padding, overlays and so on
-@include mat-core();
 
-// define the colors to use in your theme
-// Check for color palettes https://material.io/design/color/#color-usage-palettes
-$primary: mat-palette($mat-lime, 500);
-$accent:  mat-palette($mat-lime, 500, A200, A400);
-$warn:    mat-palette($mat-red, 500);
+// OR IMPORT YOUR THEME SETUP
+// // ---- SET YOUR OWN THEME ----
+// Loads the angular material theming variables and functions 
+// that enable you to customize and interact with the material theme
+// @import '~@angular/material/theming';
+// // mat-core function adds the default styling for the material components, like colors, padding, overlays and so on
+// @include mat-core();
 
-// mat-typography-config() in angular-material library is the basic configuration for the default typography which is “Roboto”
-// Check to see how to change https://github.com/angular/material2/blob/master/guides/typography.md
-$config: mat-typography-config();
+// // define the colors to use in your theme
+// // Check for color palettes https://material.io/design/color/#color-usage-palettes
+// $primary: mat-palette($mat-lime, 500);
+// $accent:  mat-palette($mat-lime, 500, A200, A400);
+// $warn:    mat-palette($mat-red, 500);
+
+// // mat-typography-config() in angular-material library is the basic configuration for the default typography which is “Roboto”
+// // Check to see how to change https://github.com/angular/material2/blob/master/guides/typography.md
+// $config: mat-typography-config();
 
 
-$theme: mat-light-theme($primary, $accent, $warn);
+// $theme: mat-light-theme($primary, $accent, $warn);
 
-// execute the function and applies the variables to the theme with the defined colors
-@include angular-material-theme($theme);
+// // execute the function and applies the variables to the theme with the defined colors
+// @include angular-material-theme($theme);
+// // ---- END SETTING YOUR OWN THEME ----
 
 
 body {
   margin: 0;
-  font-family: mat-font-family($config);
+  // font-family: mat-font-family($config); // COMMENt OUT THIS IF YOU USE OWN THEME
   font-weight: normal;
 }
 

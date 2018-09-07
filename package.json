@@ -1,6 +1,9 @@
 {
   "name": "angular-material-starter",
   "version": "0.0.0",
+  "author": {
+    "name": "Nemanja Marinkovic"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError, } from 'rxjs/operators';
+
 import { TransportService } from './transport.service';
 
 
@@ -75,6 +76,6 @@ export class BaseApiService<T> {
     } else {
       errorMessage = error;
     }
-    return Observable.throw(errorMessage);
+    return throwError(errorMessage);
   }
 }

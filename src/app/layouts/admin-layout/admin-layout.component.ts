@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Router } from '@angular/router';
 
 import { NAVIGATION_LINKS } from '../navigation-links';
 

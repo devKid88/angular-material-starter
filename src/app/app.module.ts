@@ -6,11 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ToastrModule } from 'ngx-toastr';
 import {
-  MatButtonModule,
-  MatIconModule,
   MatListModule,
   MatGridListModule,
-  MatCardModule,
   MatMenuModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -23,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppHttpInterceptor } from './core/auth-interceptor';
 import { CoreModule } from './core/core.module';
 import { Page404Component } from './page404/page404.component';
+import { MaterialModule } from './material/material.module';
 
 const toastrConfig = {
   timeOut: 2000
@@ -41,15 +39,13 @@ const toastrConfig = {
     // TODO: Check Flex layout for root option
     FlexLayoutModule,
     AppRoutingModule,
+    MaterialModule,
     MatSidenavModule,
     MatToolbarModule,
     CoreModule,
     LayoutModule,
-    MatButtonModule,
-    MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatCardModule,
     MatMenuModule
   ],
   providers: [
