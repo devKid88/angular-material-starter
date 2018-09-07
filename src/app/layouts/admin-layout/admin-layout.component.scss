@@ -2,6 +2,10 @@
   height: 100vh;
 }
 
+.content {
+  margin: 20px;
+}
+
 .sidenav {
   width: 200px;
 }
@@ -16,7 +20,7 @@
 }
 
 ::ng-deep .mat-toolbar{
-  z-index: 998;
+  z-index: 2;
   position: fixed
 }
 
