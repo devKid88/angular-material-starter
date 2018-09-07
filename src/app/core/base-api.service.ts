@@ -4,7 +4,6 @@ import { map, catchError, } from 'rxjs/operators';
 
 import { TransportService } from './transport.service';
 
-
 export interface PaginatedResult<T> {
   total_count: number;
   items: T[];

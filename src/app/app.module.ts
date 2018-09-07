@@ -11,7 +11,7 @@ import {
   MatMenuModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -21,6 +21,9 @@ import { AppHttpInterceptor } from './core/auth-interceptor';
 import { CoreModule } from './core/core.module';
 import { Page404Component } from './page404/page404.component';
 import { MaterialModule } from './material/material.module';
+import { TransportService } from './core/transport.service';
+import { BaseApiService } from './core/base-api.service';
+import { HeadersService } from './core/headers.service';
 
 const toastrConfig = {
   timeOut: 2000
@@ -35,8 +38,8 @@ const toastrConfig = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ToastrModule.forRoot(toastrConfig),
-    // TODO: Check Flex layout for root option
     FlexLayoutModule,
     AppRoutingModule,
     MaterialModule,
@@ -57,7 +60,10 @@ const toastrConfig = {
       },
       deps: [Router],
       multi: true
-    }
+    },
+    HeadersService,
+    TransportService,
+    BaseApiService
   ],
   bootstrap: [AppComponent]
 })

@@ -18,7 +18,7 @@ export class HeadersService {
     return headers;
   }
 
-  private token(): string {
+  private get token(): string {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser && currentUser.token) {
       return currentUser.token;

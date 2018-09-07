@@ -10,9 +10,9 @@ import { TransportService } from '../../core/transport.service';
 export class UserService extends BaseApiService<UserModel> {
 
   constructor(
-    public transportService: TransportService
+    public transport: TransportService
   ) {
-    super(transportService);
+    super(transport);
     this.name = 'users';
   }
 }
