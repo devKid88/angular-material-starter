@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   username: string;
   password: string;
+  showSpinner: boolean;
 
   positions = [
     'start', 'center', 'end'
@@ -31,11 +32,15 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    if (this.username == 'admin' && this.password == 'admin') {
-      this.router.navigate(['dashboard']);
-    } else {
-      this.alert.error('Bad Credentials');
-    }
+    this.showSpinner = true;
+    setTimeout(() => { // Waiting for api response test
+      if (this.username == 'admin' && this.password == 'admin') {
+        this.router.navigate(['dashboard']);
+      } else {
+        this.alert.error('Bad Credentials');
+        this.showSpinner = false;
+      }
+    }, 2000);
   }
 
   private randomPosition() {

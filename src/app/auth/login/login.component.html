@@ -12,10 +12,12 @@
           <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
         </mat-form-field>
       </form>
-      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      <div fxLayout="row" fxLayoutAlign="center" >
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <div fxLayout="row" fxLayoutAlign="space-between">
+      <div *ngIf="!showSpinner" fxLayout="row" fxLayoutAlign="space-between">
         <button mat-raised-button (click)="login()" color="primary">Login</button>
         <button mat-raised-button>Forgot Password</button>
       </div>

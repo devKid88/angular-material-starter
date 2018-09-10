@@ -25,8 +25,7 @@ export class AdminLayoutComponent {
     private router: Router
   ) { }
 
-  logout() {
+  logout(event) {
     this.router.navigate(['auth/login']);
   }
-
 }
