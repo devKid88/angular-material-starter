@@ -5,7 +5,9 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { HeadersService } from './headers.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TransportService extends HeadersService {
 
   protected baseUrl: string;

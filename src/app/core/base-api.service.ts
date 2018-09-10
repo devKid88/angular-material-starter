@@ -9,7 +9,10 @@ export interface PaginatedResult<T> {
   items: T[];
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class BaseApiService<T> {
 
   name: string;

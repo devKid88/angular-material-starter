@@ -17,13 +17,10 @@ import { Router } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppHttpInterceptor } from './core/auth-interceptor';
+import { AppHttpInterceptor } from './core/auth/auth-interceptor';
 import { CoreModule } from './core/core.module';
 import { Page404Component } from './page404/page404.component';
 import { MaterialModule } from './material/material.module';
-import { TransportService } from './core/transport.service';
-import { BaseApiService } from './core/base-api.service';
-import { HeadersService } from './core/headers.service';
 
 const toastrConfig = {
   timeOut: 2000
@@ -61,9 +58,6 @@ const toastrConfig = {
       deps: [Router],
       multi: true
     },
-    HeadersService,
-    TransportService,
-    BaseApiService
   ],
   bootstrap: [AppComponent]
 })
