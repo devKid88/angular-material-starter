@@ -7,6 +7,6 @@ export const NAVIGATION_LINKS = [
   {
     name: 'Users',
     route: '/user',
-    icon: ''
+    icon: 'people'
   }
 ];

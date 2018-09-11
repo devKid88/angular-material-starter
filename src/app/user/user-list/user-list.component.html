@@ -1,9 +1,13 @@
 <h1 class="mat-h1">Users</h1>
 
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
-
+<div fxLayout="row">
+  <div fxFlex.gt-xs="100%" fxFlex.gt-md="30%" >
+    <mat-form-field class="full-width">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+</div>
+  
 <div>
   <table mat-table [dataSource]="dataSource" matSort>
 
@@ -26,7 +30,3 @@
 </div>
 
 <mat-paginator #paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
-
-
-
-<!-- <p *ngFor="let user of users">{{user.name}}</p> -->
